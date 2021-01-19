@@ -34,66 +34,38 @@
     <br />
   </header>
 
-  <body>
-    <div class="container-fluid">
-      <!-- Task planner heading goes here - not sure how to use container??-->
-      <h2
-        id="container-item-h2"
-        class="text-light bg-info d-flex justify-content-center"
-      >
-        A Task Planner for Robin's Amazing Students
-      </h2>
-      <h4
-        id="container-item-h4"
-        class="text-secondary font-italic d-flex justify-content-center"
-      >
-        Keep yourself organised throughout your Generation course!
-      </h4>
-      <img
-        src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg"
-        alt="To do post-it note"
-        class="img-todo rounded mx-auto d-block"
-      />
-    </div>
+</head>
+<!--header-->   
 
-    <div>
-      <form>
-        <!-- Task Name Input -->
-        <div class="form-group">
-          <label class="labelName" for="formGroupTaskName">Task Name</label>
-          <input
-            type="text"
-            class="form-control col-md-6"
-            id="formGroupTaskName"
-            placeholder="Name of Task"
-          />
-        </div>
+<div>
+  <h1 class="text-center">Lets get to know you!</h1>
+  <h4 class="text-center">Fill in the requirements below</h4>
+</div>
 
-        <!-- Task Description Input -->
-        <div class="form-group">
-          <label class="labelDescription" for="formGroupDescription"
-            >Description</label
-          >
-          <input
-            type="text"
-            class="form-control col-md-6"
-            id="formGroupDescription"
-            placeholder="Description of task"
-          />
-        </div>
 
-        <!-- Assigned To Input DropDown List -->
-        <div class="form-group col-md-2">
-          <label for="labelAssigned">Assigned To</label>
-          <select id="labelAssigned" class="form-control">
-            <option selected>Choose...</option>
-            <option>Amr</option>
-            <option>Anya</option>
-            <option>Fran</option>
-            <option>Saima</option>
-          </select>
-        </div>
+<br>
+<body>
 
+
+<!--header---->
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="75" style="width: 100%"></div>
+</div>
+
+<br>
+
+  <div class="container-fluid">
+    <!-- Task planner heading goes here - not sure how to use container??-->
+    <h2 id="container-item-h2" class="text-light bg-info d-flex justify-content-center">A Task Planner for Robin's Amazing Students</h2>
+    <h4 id="container-item-h4" class="text-secondary font-italic d-flex justify-content-center">Keep yourself organised throughout your Generation course!</h4>
+    <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" alt="To do post-it note" class="img-todo rounded mx-auto d-block"/>
+  </div>
+
+
+  <form>
+    
+  
         <!-- Date Input -->
         <div class="form-group">
           <label class="control-label" for="date">Due Date</label>
@@ -106,17 +78,12 @@
           />
         </div>
 
-        <!-- Task Status Input DropDown List -->
-        <div class="form-group col-md-2">
-          <label for="labelStatus">Status</label>
-          <select id="labelStatus" class="form-control">
-            <option selected>Choose...</option>
-            <option>To do</option>
-            <option>In progress</option>
-            <option>Review</option>
-            <option>Done</option>
-          </select>
-        </div>
+    <!-- Task Description Input -->
+    <div class="form-group">
+      <label class="labelDescription" for="formGroupDescription">Description</label>
+      <input type="text" class="form-control col-md-6" id="formGroupDescription" placeholder="Description of task">
+    </div>
+    
 
         <!-- Submit button -->
         <div class="form-group">
@@ -130,5 +97,51 @@
     <div>
       <!-- Card section goes in here-->
     </div>
-  </body>
+
+  </form>
+</div>
+
+
+<!-- Card section goes in here-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card text-center" style="width: 18rem;">
+        <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Practice Codecademy</h5>
+          <p class="card-text">Finish Bootstrap module</p>
+          <p class="card-text">Saima</p>
+          <p class="card-text">01-30-2021</p>
+          <p class="card-text">In Progress</p>
+          <a href="#" class="btn btn-success">Done</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://media.gettyimages.com/photos/notepad-to-do-list-get-things-done-picture-id116772376?s=612x612" class="d-block w-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.hillzfm.co.uk/wp-content/uploads/2020/04/1000X500_Things_To_Do_Web_97cf2f8c-7268-44fe-bc00-166478faa73c.png." class="d-block w-50" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+</body>
 </html>

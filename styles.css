@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 .container-fluid {
     margin-bottom: 60px;
 }
@@ -10,7 +12,8 @@
 .labelAssigned,
 #date,
 .control-label,
-.btn {
+.btn,
+#carouselExampleIndicators {
     margin-left: 16px;
 }
 
@@ -39,3 +42,34 @@
     margin-top: 25px;
     
 }
+
+.card-img-top {
+    width: 25px;
+    height: 25%;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.btn-success {
+    margin-left: 0px;
+    
+}
+
+.carousel-inner {
+    margin-bottom: 50px;
+}
+
+.card-text {
+    font-size: 20px;
+
+}
+
+.card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+>>>>>>> 358d0fd9c0dc1c2f3b1ced284ba60dedd2054d0e
