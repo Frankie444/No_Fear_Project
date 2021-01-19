@@ -1,1 +1,75 @@
 
+<<<<<<< HEAD
+=======
+.container-fluid {
+    margin-bottom: 60px;
+}
+
+#formGroupTaskName,
+.labelName,
+#formGroupDescription,
+.labelDescription,
+.labelAssigned,
+#date,
+.control-label,
+.btn,
+#carouselExampleIndicators {
+    margin-left: 16px;
+}
+
+.labelName,
+.labelDescription,
+.labelAssigned,
+.control-label,
+.labelStatus {
+     font-size: medium;
+}
+
+
+.img-todo {
+    width: 350px;
+    height: 350px;
+    margin-top: 35px;
+    justify-self: center;
+}
+
+.form-control {
+    width: 90%;
+}
+
+#container-item-h2 {
+    padding-bottom: 8px;
+    margin-top: 25px;
+    
+}
+
+.card-img-top {
+    width: 25px;
+    height: 25%;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.btn-success {
+    margin-left: 0px;
+    
+}
+
+.carousel-inner {
+    margin-bottom: 50px;
+}
+
+.card-text {
+    font-size: 20px;
+
+}
+
+.card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+>>>>>>> 358d0fd9c0dc1c2f3b1ced284ba60dedd2054d0e
