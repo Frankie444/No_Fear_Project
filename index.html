@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>No Fear Task Planner</title>
-  <link rel="stylesheet" href="styles.css" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Fear Task Planner</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+  
+   </head>
+  <!--header-->
+  <header>
+    <h1>Lets get to know you!</h1>
+    <h4>Fill in the requirements below</h4>
+    <br />
+  </header>
 
 </head>
 <!--header-->   
@@ -21,7 +49,7 @@
 
 <br>
 <body>
-
+ 
 
 <!--header---->
 
@@ -38,15 +66,21 @@
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" alt="To do post-it note" class="img-todo rounded mx-auto d-block"/>
   </div>
 
-<div>
 
   <form>
-
-    <!-- Task Name Input -->
-    <div class="form-group">
-      <label class="labelName" for="formGroupTaskName">Task Name</label>
-      <input type="text" class="form-control col-md-6" id="formGroupTaskName" placeholder="Name of Task">
-    </div>
+    
+  
+        <!-- Date Input -->
+        <div class="form-group">
+          <label class="control-label" for="date">Due Date</label>
+          <input
+            class="form-control col-1"
+            id="date"
+            name="date"
+            placeholder="DD/MM/YYYY"
+            type="text"
+          />
+        </div>
 
     <!-- Task Description Input -->
     <div class="form-group">
@@ -55,39 +89,17 @@
     </div>
     
 
-    <!-- Assigned To Input DropDown List -->
-      <div class="form-group col-md-2">
-      <label for="labelAssigned">Assigned To</label>
-      <select id="labelAssigned" class="form-control">
-        <option selected>Choose...</option>
-        <option>Amr</option>
-        <option>Anya</option>
-        <option>Fran</option>
-        <option>Saima</option>
-      </select>
+        <!-- Submit button -->
+        <div class="form-group">
+          <button class="btn btn-info" name="submit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
-    
-    <!-- Date Input -->
-    <div class="form-group"> 
-      <label class="control-label" for="date">Due Date</label>
-      <input class="form-control col-1" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
-    </div>
-    
-    <!-- Task Status Input DropDown List -->
-    <div class="form-group col-md-2">
-      <label for="labelStatus">Status</label>
-      <select id="labelStatus" class="form-control">
-        <option selected>Choose...</option>
-        <option>To do</option>
-        <option>In progress</option>
-        <option>Review</option>
-        <option>Done</option>
-    </select>
-    </div> 
 
-    <!-- Submit button -->
-    <div class="form-group"> 
-      <button class="btn btn-info" name="submit" type="submit">Submit</button>
+    <div>
+      <!-- Card section goes in here-->
     </div>
 
   </form>
@@ -98,8 +110,11 @@
 
 <div class="card text-center float-left" style="width: 18rem;">
   <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
-    <div class="card-body">
-    <h5 class="card-title">Practice Codecademy</h5>
+  
+    
+  <h5 class="card-title">Practice Codecademy</h5>
+  
+    <div class="card-deck">
     <p class="card-text">Finish Bootstrap module</p>
     <p class="card-text">Saima</p>
     <p class="card-text">30-01-2021</p>
