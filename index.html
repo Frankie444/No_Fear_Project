@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>No Fear Task Planner</title>
-    <link rel="stylesheet" href="draftstyle.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -26,7 +26,7 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
-    <script src="draftscript.js"></script>
+    <script src="script.js"></script>
   </head>
  
  
@@ -53,28 +53,26 @@
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" alt="To do post-it note" class="img-todo rounded mx-auto d-block"/>
   </div>
 
+<!-- ALL FORM INFO BElOW -->
+
 
   <form>  
-        <!-- Date Input -->
-        <div id="newTaskNameInput" class="form-group">
-          <label class="control-label" for="date">Due Date</label>
-          <input
-            class="form-control col-1"
-            id="date"
-            name="date"
-            placeholder="DD/MM/YYYY"
-            type="text"
-          />
-        </div>
+ 
+    <!-- Name Input -->
+    <div class="form-group">
+      <label class="labelDescription" for="formGroupDescription">Name</label>
+      <input type="text" class="form-control col-md-6" id="formGroupDescription" placeholder="Name">
+    </div>
 
     <!-- Task Description Input -->
-    <div id="newTaskNameInput" class="form-group">
+    <div class="form-group">
       <label class="labelDescription" for="formGroupDescription">Description</label>
       <input type="text" class="form-control col-md-6" id="formGroupDescription" placeholder="Description of task">
     </div>
     
+    <div>
     <!-- Assigned To Input DropDown List -->
-      <div id="newTaskNameInput" class="form-group col-md-2">
+     <div class="form-group col-md-2">
       <label for="labelAssigned">Assigned To</label>
       <select id="labelAssigned" class="form-control">
         <option selected>Choose...</option>
@@ -82,15 +80,31 @@
         <option>Anya</option>
         <option>Fran</option>
         </select>
+        <br>
+            <!-- Status-->
+        <div class="form-group dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Status
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Submitted</a>
+            <a class="dropdown-item" href="#">In progress</a>
+            <a class="dropdown-item" href="#">Completed</a>
+          </div>
+        </div>
     </div>
+    <div>
+  
     
     <!-- Date Input -->
-    <div id="newTaskNameInput" class="form-group"> 
+    <div class="form-group"> 
       <label class="control-label" for="date">Due Date</label>
       <input class="form-control col-1" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
     </div>
+
+
         <!-- Submit button -->
-        <div id="newTaskNameInput" class="form-group">
+        <div class="form-group">
           <button class="btn btn-info" name="submit" type="submit">
             Submit
           </button>
