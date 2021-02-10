@@ -69,5 +69,14 @@
 }
 
 .status {
+<<<<<<< HEAD
   padding-left: 20px;
 }
+=======
+  padding: 20px;
+}
+.needs-validation {
+  width: 30%;
+  height: 40%;
+}
+>>>>>>> 2b1f727a27815daa7290547f57ddaeafad10bdea
