@@ -71,3 +71,7 @@
 .status {
   padding: 20px;
 }
+.needs-validation {
+  width: 30%;
+  height: 40%;
+}
