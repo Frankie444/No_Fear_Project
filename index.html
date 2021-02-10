@@ -58,24 +58,25 @@
 
 <!-- ALL FORM INFO BElOW -->
 
+<!-- Task Name-->
   <form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
+      <div class=" fomr-group col-md-6 mb-3">
         <label for="validationCustom01">Task Name:</label>
         <input type="text" class="form-control" id="validationCustom01" required>
         <div class="invalid-feedback">
           Please provide a valid task name.
         </div>
       </div>
-      <div class="col-md-6 mb-3">
+
+<!-- Task Description-->
+      <div class="form-group col-md-6 mb-3">
         <label for="validationCustom02">Task Description:</label>
         <input type="text" class="form-control" id="validationCustom02" required>
         <div class="invalid-feedback">
           Please provide a valid task description.
         </div>
-      </div>
-     
 
+<!--Due Date -->
         <div class="form-group">
           <label for="validationCustom04" class="control-label">Due Date:</label>
           <div>
@@ -85,13 +86,11 @@
           </div>
         </div>
       </div>
-
-
     </div>
-    <div class="form-row">
-      
 
-      <div class="col-md-3 mb-3">
+<!--Assigned To -->
+    <div class="form-group">
+       <div class="col-md-3 mb-3">
         <label for="validationCustom05">Assigned To:</label>
         <select class="custom-select" id="validationCustom05" required>
           <option selected disabled value="">Choose...</option>
@@ -105,10 +104,14 @@
       </div>
     </div>
 <br>
+
+<!--Submit Button -->
     <button class="btn btn-primary" type="submit">Submit form</button>
 <br>
 <br>
-    <div class="form-group">
+
+<!--Status radios -->
+    <div class="form-group status">
       <label>Status</label>
       <div class="radio">
         <label for="validationCustom03"><input type="radio" name="status" value="Submitted" id="validationCustom03" required/> Submitted</label>
@@ -123,7 +126,7 @@
       </div>
   </form>
     
-<!-- Card section goes in here-->
+<!-- Card section -->
 <div class=card-group>
   <div class="card text-center float-left" style="width: 18rem;">
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
