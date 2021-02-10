@@ -60,7 +60,7 @@
 
 <!-- Task Name-->
   <form class="needs-validation" novalidate>
-      <div class=" fomr-group col-md-6 mb-3">
+      <div class=" form-group col-md-6 mb-3 taskName">
         <label for="validationCustom01">Task Name:</label>
         <input type="text" class="form-control" id="validationCustom01" required>
         <div class="invalid-feedback">
@@ -69,27 +69,18 @@
       </div>
 
 <!-- Task Description-->
-      <div class="form-group col-md-6 mb-3">
+      <div class="form-group col-md-6 mb-3 taskDescription">
         <label for="validationCustom02">Task Description:</label>
         <input type="text" class="form-control" id="validationCustom02" required>
         <div class="invalid-feedback">
           Please provide a valid task description.
         </div>
 
-<!--Due Date -->
-        <div class="form-group">
-          <label for="validationCustom04" class="control-label">Due Date:</label>
-          <div>
-          <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="validationCustom04" required>
-          <div class="invalid-feedback">
-            Please select a date.
-          </div>
-        </div>
-      </div>
+
     </div>
 
 <!--Assigned To -->
-    <div class="form-group">
+    <div class="form-group assignedTo">
        <div class="col-md-3 mb-3">
         <label for="validationCustom05">Assigned To:</label>
         <select class="custom-select" id="validationCustom05" required>
@@ -103,6 +94,18 @@
         </div>
       </div>
     </div>
+
+<!--Due Date -->
+    <div id="date" class="form-group date">
+      <div class="col-md-4 mb-3 date">
+      <label for="validationCustom04" class="control-label">Due Date:</label>
+      <div>
+      <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="validationCustom04" required>
+      <div class="invalid-feedback">
+        Please select a date.
+      </div>
+    </div>
+  </div>
 <br>
 
 <!--Submit Button -->
