@@ -36,8 +36,8 @@
 <!--header-->   
 
 <div>
-  <h1 class="text-center">Lets get to know you!</h1>
-  <h4 class="text-center">Fill in the requirements below</h4>
+  <h4 class="text-center text-secondary d-flex justify-content-center">Generation JWD Bootcamp</h4>
+  <h2 class="text-center text-secondary font-italic d-flex justify-content-center">No Fear Project</h2>
 </div>
 <br>
 
@@ -58,63 +58,71 @@
 
 <!-- ALL FORM INFO BElOW -->
 
-<form class="form-horizontal" id="validateForm">
-  <div class="row">
-    <div class="col-md-offset-1 col-md-4">
-  
-        <div class="form-group">
-        <label class="control-label">Name of Task:</label>
-        <input name="taskName" placeholder="eg. Daily Standup" class="form-control"  type="text">
-        <div class="valid-feedback"></div>
-        <div class="invalid-feedback">invalid-feedback</div>
+  <form class="needs-validation" novalidate>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom01">Task Name:</label>
+        <input type="text" class="form-control" id="validationCustom01" required>
+        <div class="invalid-feedback">
+          Please provide a valid task name.
         </div>
-        
-        <div class="form-group">
-        <label class="control-label">Description of Task:</label>
-        <input name="taskDescription" placeholder="eg. Prepare notes for meeting" class="form-control" type="text">
-        </div>
-        
-        <div class="form-group">
-        <label>Status</label>
-        <div class="radio">
-          <label><input type="radio" name="status" value="Submitted" /> Submitted</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="status" value="In Progess" /> In Progress</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="status" value="Completed" /> Completed</label>
-        </div>
-        </div>
-      
-    </div>
-    <div class="col-md-offset-1 col-md-4">
-      <div class="form-group">
-        <label class="control-label">Due Date:</label>
-        <div>
-        <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10">
       </div>
-    </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Task Description:</label>
+        <input type="text" class="form-control" id="validationCustom02" required>
+        <div class="invalid-feedback">
+          Please provide a valid task description.
+        </div>
+      </div>
      
-      <div class="form-group">
-        <label class="control-label">Assigned To:</label>
-        <select name="assignedTo" class="form-control" >
-          <option value=" " >Robin</option>
-          <option>Saima</option>
+
+        <div class="form-group">
+          <label for="validationCustom04" class="control-label">Due Date:</label>
+          <div>
+          <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="validationCustom04" required>
+          <div class="invalid-feedback">
+            Please select a date.
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="form-row">
+      
+
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom05">Assigned To:</label>
+        <select class="custom-select" id="validationCustom05" required>
+          <option selected disabled value="">Choose...</option>
           <option>Anya</option>
+          <option>Saima</option>
           <option>Fran</option>
         </select>
+        <div class="invalid-feedback">
+          Please select a valid team member.
+        </div>
       </div>
-      
-      <div class="form-group">
-        <button name="button" type="submit" class="btn btn-success" >Submit</button>
-      </div>
-        
     </div>
-  </div>
- </form>
-
-  
+<br>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+<br>
+<br>
+    <div class="form-group">
+      <label>Status</label>
+      <div class="radio">
+        <label for="validationCustom03"><input type="radio" name="status" value="Submitted" id="validationCustom03" required/> Submitted</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="status" value="In Progess" id="validationCustom03" /> In Progress</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="status" value="Completed" id="validationCustom03" /> Completed</label>
+        
+      </div>
+      </div>
+  </form>
+    
 <!-- Card section goes in here-->
 <div class=card-group>
   <div class="card text-center float-left" style="width: 18rem;">
@@ -178,6 +186,29 @@
   </div>
   </div>
   </div>
+
+
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+
 
 </body>
 </html>
