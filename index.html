@@ -29,8 +29,8 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
-    <script src="taskManager.js"></script>
-    <script src="index.js"></script>
+    <script src="./js/taskManager.js"></script>
+    <script src="./js/index.js"></script>
   </head>
  
  
@@ -60,10 +60,10 @@
 <!-- ALL FORM INFO BElOW -->
 
 <!-- Task Name-->
-  <form class="needs-validation" novalidate>
+  <form id="task-form" class="needs-validation" novalidate>
     <div class="form-group col-md-6 mb-3 taskName">
-        <label for="validationCustom01">Task Name:</label>
-        <input type="text" class="form-control" id="validationCustom01" required>
+        <label for="task-name">Task Name:</label>
+        <input type="text" class="form-control" id="task-name" required>
         <div class="invalid-feedback">
           Please provide a valid task name.
         </div>
@@ -71,20 +71,18 @@
 
 <!-- Task Description-->
       <div class="form-group col-md-6 mb-3 taskDescription">
-        <label for="validationCustom02">Task Description:</label>
-        <input type="text" class="form-control" id="validationCustom02" required>
+        <label for="task-description">Task Description:</label>
+        <input type="text" class="form-control" id="task-description" required>
         <div class="invalid-feedback">
           Please provide a valid task description.
         </div>
-
-
     </div>
 
 <!--Assigned To -->
     <div class="form-group assignedTo">
        <div class="col-md-3 mb-3">
-        <label for="validationCustom05">Assigned To:</label>
-        <select class="custom-select" id="validationCustom05" required>
+        <label for="assigned-to">Assigned To:</label>
+        <select class="custom-select" id="assigned-to" required>
           <option selected disabled value="">Choose...</option>
           <option>Anya</option>
           <option>Saima</option>
@@ -99,36 +97,37 @@
 <!--Due Date -->
     <div id="date" class="form-group date">
       <div class="col-md-4 mb-3 date">
-      <label for="validationCustom04" class="control-label">Due Date:</label>
+      <label for="due-date" class="control-label">Due Date:</label>
       <div>
-      <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="validationCustom04" required>
+      <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="due-date" required>
       <div class="invalid-feedback">
         Please select a date.
       </div>
     </div>
   </div>
-<br>
+
+<!--Status dropdown -->
+<div class="form-group status">
+  <div class="col-md-3 mb-3">
+   <label for="status">Status:</label>
+   <select class="custom-select" id="status" required>
+     <option selected disabled value="">Choose...</option>
+     <option>Submitted</option>
+     <option>In Progress</option>
+     <option>Completed</option>
+   </select>
+   <div class="invalid-feedback">
+     Please select a valid status.
+   </div>
+ </div>
+</div>
 
 <!--Submit Button -->
+  <div class="form-group">
     <button class="btn btn-primary" type="submit">Submit form</button>
-<br>
-<br>
-
-<!--Status radios -->
-    <div class="form-group status">
-      <label>Status</label>
-      <div class="radio">
-        <label for="validationCustom03"><input type="radio" name="status" value="Submitted" id="validationCustom03" required/> Submitted</label>
-      </div>
-      <div class="radio">
-        <label><input type="radio" name="status" value="In Progess" id="validationCustom03" /> In Progress</label>
-      </div>
-      <div class="radio">
-        <label><input type="radio" name="status" value="Completed" id="validationCustom03" /> Completed</label>
-        
-      </div>
-      </div>
-  </form>
+  </div>
+    
+</form>
     
 <!-- Card section -->
 <div class=card-group>
