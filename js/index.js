@@ -1,9 +1,8 @@
-const form = document.getElementById("task-form");
-
 //below creates an object instance using the TaskManager class
 const anotherTask = new TaskManager(0);
 console.log(anotherTask);
 
+const form = document.getElementById("task-form");
 
 //below creates hardcoding of new tasks (and pushes to this.tasks array)
 //anotherTask.addTask('sleep', 'shut your eyes', 'saima', '11/02/2021', 'In Progress');
@@ -29,12 +28,13 @@ form.addEventListener("submit", (event) => {
 
 
 anotherTask.addTask(taskName, description, assignedTo, dueDate, status);
+
 newTaskNameInput.value="";
 newTaskDescription.value="";
 newTaskAssignedTo.value="";
 newTaskDueDate.value="";
 newTaskStatus.value="";
+
+anotherTask.render();
+
 }); 
-
-
- 
