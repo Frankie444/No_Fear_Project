@@ -62,7 +62,7 @@
 <!-- Task Name-->
   <form id="task-form" class="needs-validation" novalidate>
     <div class="form-group col-md-6 mb-3 taskName">
-        <label for="task-name">Task Name:</label>
+        <label class="font-weight-bold" for="task-name">Task Name:</label>
         <input type="text" class="form-control" id="task-name" required>
         <div class="invalid-feedback">
           Please provide a valid task name.
@@ -71,7 +71,7 @@
 
 <!-- Task Description-->
       <div class="form-group col-md-6 mb-3 taskDescription">
-        <label for="task-description">Task Description:</label>
+        <label class="font-weight-bold" for="task-description">Task Description:</label>
         <input type="text" class="form-control" id="task-description" required>
         <div class="invalid-feedback">
           Please provide a valid task description.
@@ -80,8 +80,8 @@
 
 <!--Assigned To -->
     <div class="form-group assignedTo">
-       <div class="col-md-3 mb-3">
-        <label for="assigned-to">Assigned To:</label>
+       <div class="col-md-2 mb-3">
+        <label class="font-weight-bold" for="assigned-to">Assigned To:</label>
         <select class="custom-select" id="assigned-to" required>
           <option selected disabled value="">Choose...</option>
           <option>Anya</option>
@@ -96,8 +96,8 @@
 
 <!--Due Date -->
     <div id="date" class="form-group date">
-      <div class="col-md-4 mb-3 date">
-      <label for="due-date" class="control-label">Due Date:</label>
+      <div class="col-md-6 mb-3 date">
+      <label class="font-weight-bold"  for="due-date" class="control-label">Due Date:</label>
       <div>
       <input name="date" type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-02-10" id="due-date" required>
       <div class="invalid-feedback">
@@ -105,11 +105,14 @@
       </div>
     </div>
   </div>
+</div>
 
 <!--Status dropdown -->
+
+
 <div class="form-group status">
-  <div class="col-md-3 mb-3">
-   <label for="status">Status:</label>
+  <div class="col-md-2 mb-3">
+   <label class="font-weight-bold"  for="status">Status:</label>
    <select class="custom-select" id="status" required>
      <option selected disabled value="">Choose...</option>
      <option>Submitted</option>
@@ -124,11 +127,15 @@
 
 <!--Submit Button -->
   <div class="form-group">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button class="btn btn-info text-dark font-weight-bold" type="submit">Submit form</button>
   </div>
-    
+  
 </form>
-    
+
+</div>
+
+<br>
+
 <!-- Card section -->
 <div class=card-group>
   <div class="card text-center float-left" style="width: 18rem;">
@@ -194,7 +201,7 @@
   </div>
 
 
-  <script>
+<script>
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   (function() {
     'use strict';
@@ -215,7 +222,7 @@
     },false);
     
   })();
-  </script>
+  </script>*-->
 
 
 </body>
