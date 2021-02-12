@@ -5,10 +5,30 @@ console.log(anotherTask);
 const form = document.getElementById("task-form");
 
 //below creates hardcoding of new tasks (and pushes to this.tasks array)
-//anotherTask.addTask('sleep', 'shut your eyes', 'saima', '11/02/2021', 'In Progress');
-//anotherTask.addTask('study', 'open your laptop', 'fran', '22/02/2021', 'In Progress');
-//anotherTask.addTask('eat', 'make sandwich', 'anya', '22/02/2021', 'In Progress');
-//anotherTask.addTask('washing', 'clean football clothes', 'fran', '31/02/2021', 'In Progress');
+anotherTask.addTask(
+  "sleep",
+  "shut your eyes",
+  "saima",
+  new Date(),
+  "In Progress"
+);
+anotherTask.addTask(
+  "study",
+  "open your laptop",
+  "fran",
+  new Date(),
+  "In Progress"
+);
+anotherTask.addTask("eat", "make sandwich", "anya", new Date(), "In Progress");
+anotherTask.addTask(
+  "washing",
+  "clean football clothes",
+  "fran",
+  new Date(),
+  "In Progress"
+);
+
+anotherTask.render();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -33,4 +53,14 @@ form.addEventListener("submit", (event) => {
   newTaskStatus.value = "";
 
   anotherTask.render();
+});
+
+const taskList = document.getElementById("task-list");
+taskList.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn")) {
+    const taskElement = event.target.parentElement.parentElement;
+    const taskId = taskElement.id;
+    anotherTask.completeTask(taskId);
+    anotherTask.render();
+  }
 });
