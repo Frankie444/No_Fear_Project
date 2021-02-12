@@ -29,7 +29,11 @@ form.addEventListener("submit", (event) => {
 
 
 anotherTask.addTask(taskName, description, assignedTo, dueDate, status);
-
+newTaskNameInput.value="";
+newTaskDescription.value="";
+newTaskAssignedTo.value="";
+newTaskDueDate.value="";
+newTaskStatus.value="";
 }); 
 
 
