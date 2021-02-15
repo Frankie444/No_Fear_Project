@@ -4,7 +4,7 @@ console.log(anotherTask);
 
 const form = document.getElementById("task-form");
 
-//below creates hardcoding of new tasks (and pushes to this.tasks array)
+/*//below creates hardcoding of new tasks (and pushes to this.tasks array)
 anotherTask.addTask(
   "sleep",
   "shut your eyes",
@@ -26,7 +26,7 @@ anotherTask.addTask(
   "fran",
   new Date(),
   "In Progress"
-);
+);*/
 
 anotherTask.render();
 
@@ -57,7 +57,7 @@ form.addEventListener("submit", (event) => {
 
 const taskList = document.getElementById("task-list");
 taskList.addEventListener("click", (event) => {
-  if (event.target.classList.contains("btn")) {
+  if (event.target.classList.contains("done-button")) {
     const taskElement = event.target.parentElement.parentElement;
     const taskId = taskElement.id;
     anotherTask.completeTask(taskId);
