@@ -1,34 +1,10 @@
 //below creates an object instance using the TaskManager class
-const anotherTask = new TaskManager(0);
-console.log(anotherTask);
+const taskManager = new TaskManager(0);
+console.log(taskManager);
 
 const form = document.getElementById("task-form");
 
-/*//below creates hardcoding of new tasks (and pushes to this.tasks array)
-anotherTask.addTask(
-  "sleep",
-  "shut your eyes",
-  "saima",
-  new Date(),
-  "In Progress"
-);
-anotherTask.addTask(
-  "study",
-  "open your laptop",
-  "fran",
-  new Date(),
-  "In Progress"
-);
-anotherTask.addTask("eat", "make sandwich", "anya", new Date(), "In Progress");
-anotherTask.addTask(
-  "washing",
-  "clean football clothes",
-  "fran",
-  new Date(),
-  "In Progress"
-);*/
-
-anotherTask.render();
+taskManager.render();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -44,7 +20,7 @@ form.addEventListener("submit", (event) => {
   let dueDate = newTaskDueDate.value;
   let status = newTaskStatus.value;
 
-  anotherTask.addTask(taskName, description, assignedTo, dueDate, status);
+  taskManager.addTask(taskName, description, assignedTo, dueDate, status);
 
   newTaskNameInput.value = "";
   newTaskDescription.value = "";
@@ -52,7 +28,7 @@ form.addEventListener("submit", (event) => {
   newTaskDueDate.value = "";
   newTaskStatus.value = "";
 
-  anotherTask.render();
+  taskManager.render();
 });
 
 const taskList = document.getElementById("task-list");
@@ -60,7 +36,7 @@ taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("done-button")) {
     const taskElement = event.target.parentElement.parentElement;
     const taskId = taskElement.id;
-    anotherTask.completeTask(taskId);
-    anotherTask.render();
+    taskManager.completeTask(taskId);
+    taskManager.render();
   }
 });
