@@ -7,8 +7,8 @@ const createTaskHtml = (
   status
 ) => {
   const html = `
-    <div class="card-deck col-2 text-center" style="width: 18rem;" id="${taskId}">
-    <div class="card">
+    <div class="col mb-4">
+    <div class="card text-center h-100" id="${taskId}">
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
     <div class="card-body">
     <h5 class="card-title">${Name}</h5>
@@ -44,7 +44,6 @@ class TaskManager {
     this.tasks.push(task);
   }
 
-
   getTaskById(taskId) {
     // Create a variable to store the found task
     let foundTask;
@@ -62,14 +61,18 @@ class TaskManager {
     return foundTask;
   }
 
-  /*getTaskById(taskId) {
+  getTaskById(taskId) {
     return this.tasks.find((task) => task.id === Number.parseInt(taskId));
   }
 
   completeTask(taskId) {
     let task = this.tasks.find((task) => task.id === Number.parseInt(taskId));
+    if (task === undefined) {
+      return;
+    }
+
     task.status = "Done";
-  }*/
+  }
 
   render() {
     let tasksHtmlList = [];
