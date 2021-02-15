@@ -15,8 +15,8 @@ const createTaskHtml = (
       <p class="card-text">${description}</p>
       <p class="card-text">${assignedTo}</p>
       <p class="card-text">${dueDate}</p>
-      <p class="card-text">${status}</p>
-      <a href="#" class="btn btn-success done-button">Done</a>
+      <p class="card-text card-status">${status}</p>
+      <a href="#" class="btn btn-info done-button">Done</a>
       </div> 
       </div>
     </div>`;
