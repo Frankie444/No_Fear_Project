@@ -7,7 +7,8 @@ const createTaskHtml = (
   status
 ) => {
   const html = `
-    <div class="card text-center float-left" style="width: 18rem;" id="${taskId}">
+    <div class="card-deck col-2 text-center" style="width: 18rem;" id="${taskId}">
+    <div class="card">
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
     <div class="card-body">
     <h5 class="card-title">${Name}</h5>
@@ -15,8 +16,9 @@ const createTaskHtml = (
       <p class="card-text">${assignedTo}</p>
       <p class="card-text">${dueDate}</p>
       <p class="card-text">${status}</p>
-      <a href="#" class="btn btn-success">Done</a>
+      <a href="#" class="btn btn-success done-button">Done</a>
       </div> 
+      </div>
     </div>`;
   return html;
 };
@@ -42,14 +44,32 @@ class TaskManager {
     this.tasks.push(task);
   }
 
+
   getTaskById(taskId) {
+    // Create a variable to store the found task
+    let foundTask;
+    // Loop over the tasks and find the task with the id passed as a parameter
+    for (let i = 0; i < this.tasks.length; i++) {
+      // Get the current task in the loop
+      const task = this.tasks[i];
+      // Check if its the right task by comparing the task's id to the id passed as a parameter
+      if (task.id === taskId) {
+        // Store the task in the foundTask variable
+        foundTask = task;
+      }
+    }
+    // Return the found task
+    return foundTask;
+  }
+
+  /*getTaskById(taskId) {
     return this.tasks.find((task) => task.id === Number.parseInt(taskId));
   }
 
   completeTask(taskId) {
     let task = this.tasks.find((task) => task.id === Number.parseInt(taskId));
     task.status = "Done";
-  }
+  }*/
 
   render() {
     let tasksHtmlList = [];

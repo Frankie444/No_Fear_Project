@@ -151,7 +151,7 @@
             <option selected disabled value="">Choose...</option>
             <option>Submitted</option>
             <option>In Progress</option>
-            <option>Completed</option>
+            <option>Done</option>
           </select>
           <div class="invalid-feedback">Please select a valid status.</div>
         </div>
@@ -159,7 +159,7 @@
 
       <!--Submit Button -->
       <div class="form-group">
-        <button class="btn btn-info text-dark font-weight-bold" type="submit">
+        <button id="submit-button" class="btn btn-info text-dark font-weight-bold" type="submit">
           Submit form
         </button>
       </div>
@@ -168,7 +168,7 @@
     <br />
 
     <!-- Card section -->
-    <div class="card-group" id="task-list"></div>
+    <div class="card-deck" id="task-list"></div>
 
     <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.btn {
+#submit-button {
   margin-left: 16px;
 }
 
@@ -56,7 +56,7 @@
   font-weight: bold;
 }
 
-#card-section {
-  margin-left: 20px;
-}
 
+.card-deck {
+  padding-left: 20px;
+}
