@@ -94,4 +94,11 @@ class TaskManager {
       tasksList.innerHTML = tasksHtml;
     }
   }
+  save() {
+    let tasksJson = JSON.stringify(this.task);
+    localStorage.setItem("tasks", tasksJson);
+ 
+    const currentId = String(this.currentId);
+    localStorage.setItem("currentId", currentId);
+}
 }
