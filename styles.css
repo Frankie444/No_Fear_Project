@@ -58,6 +58,10 @@ label,
   font-size: 20px;
 }
 
+.card-description {
+  font-style: italic;
+}
+
 .card-title {
   font-size: 25px;
   font-weight: bold;
