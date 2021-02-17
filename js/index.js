@@ -21,14 +21,19 @@ form.addEventListener("submit", (event) => {
   let status = newTaskStatus.value;
 
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
+    
+  taskManager.render();
 
+  document.getElementsByClassName("needs-validation").style.display = '';
+  
   newTaskNameInput.value = "";
   newTaskDescription.value = "";
   newTaskAssignedTo.value = "";
   newTaskDueDate.value = "";
   newTaskStatus.value = "";
-
-  taskManager.render();
+  
+  // code below attempt to clear feilds after submit, but it's failing
+  document.getElementById("task-form").reset();
 });
 
 const taskList = document.getElementById("task-list");
