@@ -64,3 +64,4 @@ taskList.addEventListener("click", (event) => {
     anotherTask.render();
   }
 });
+taskManager.save()
