@@ -23,13 +23,11 @@ const createTaskHtml = (
       </div>
       </div>
       </div>
-  </div>`
+  </div>`;
   return html;
 };
 
-
- //create class
-class TaskManager {
+module.exports = class TaskManager {
   constructor(currentId = 0) {
     this.tasks = [];
     this.currentId = currentId;
@@ -106,34 +104,31 @@ class TaskManager {
   save() {
     let tasksJson = JSON.stringify(this.task);
     localStorage.setItem("tasks", tasksJson);
- 
+
     const currentId = String(this.currentId);
     localStorage.setItem("currentId", currentId);
-}
-}
+  }
 
-    load() {
-     if (localStorage.getItem("tasks")) {
+  load() {
+    if (localStorage.getItem("tasks")) {
       const tasksJson = localStorage.getItem("tasks");
       this.tasks = JSON.parse(tasksJson);
-     }
-
-     if (localStorage.getItem('currentId')) {
-       const currentId = localStorage.getItem("currentId");
-       this.currentId = Number(currentId);
-     }
     }
-    
- deleteTask(taskId) {
+
+    if (localStorage.getItem("currentId")) {
+      const currentId = localStorage.getItem("currentId");
+      this.currentId = Number(currentId);
+    }
+  }
+
+  deleteTask(taskId) {
     const newTasks = [];
     for (let i = 0; i < this.tasks.length; i++) {
-        const task = this.tasks[i];
-        if (task.id !== taskId) {
+      const task = this.tasks[i];
+      if (task.id !== taskId) {
         newTasks.push(task);
       }
     }
     this.tasks = newTasks;
-  };
-
+  }
 };
-
