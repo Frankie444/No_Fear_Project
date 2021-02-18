@@ -1,34 +1,10 @@
 //below creates an object instance using the TaskManager class
-const anotherTask = new TaskManager(0);
-console.log(anotherTask);
+const taskManager = new TaskManager(0);
+console.log(taskManager);
 
 const form = document.getElementById("task-form");
 
-/*//below creates hardcoding of new tasks (and pushes to this.tasks array)
-anotherTask.addTask(
-  "sleep",
-  "shut your eyes",
-  "saima",
-  new Date(),
-  "In Progress"
-);
-anotherTask.addTask(
-  "study",
-  "open your laptop",
-  "fran",
-  new Date(),
-  "In Progress"
-);
-anotherTask.addTask("eat", "make sandwich", "anya", new Date(), "In Progress");
-anotherTask.addTask(
-  "washing",
-  "clean football clothes",
-  "fran",
-  new Date(),
-  "In Progress"
-);*/
-
-anotherTask.render();
+taskManager.render();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -44,15 +20,20 @@ form.addEventListener("submit", (event) => {
   let dueDate = newTaskDueDate.value;
   let status = newTaskStatus.value;
 
-  anotherTask.addTask(taskName, description, assignedTo, dueDate, status);
+  taskManager.addTask(taskName, description, assignedTo, dueDate, status);
+    
+  taskManager.render();
 
+  document.getElementsByClassName("needs-validation").style.display = '';
+  
   newTaskNameInput.value = "";
   newTaskDescription.value = "";
   newTaskAssignedTo.value = "";
   newTaskDueDate.value = "";
   newTaskStatus.value = "";
-
-  anotherTask.render();
+  
+  // code below attempt to clear feilds after submit, but it's failing
+  document.getElementById("task-form").reset();
 });
 
 const taskList = document.getElementById("task-list");
@@ -60,8 +41,15 @@ taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("done-button")) {
     const taskElement = event.target.parentElement.parentElement;
     const taskId = taskElement.id;
-    anotherTask.completeTask(taskId);
-    anotherTask.render();
+    taskManager.completeTask(taskId);
+    taskManager.render();
+  }
+
+  if (event.target.classList.contains("delete-button")) {
+    const parentTask = event.target.parentElement.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    taskManager.deleteTask(taskId);
+    //taskManager.save();
+    taskManager.render();
   }
 });
-taskManager.save()

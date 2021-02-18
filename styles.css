@@ -6,6 +6,10 @@
   margin-left: 16px;
 }
 
+form {
+  background-color: rgb(233, 233, 233);
+}
+
 .labelName,
 .labelDescription,
 .labelAssigned,
@@ -14,6 +18,12 @@
   font-size: medium;
 }
 
+label,
+.control-label {
+  font-size: larger;
+  font-weight: 550;
+}
+}
 .img-todo {
   width: 350px;
   height: 350px;
@@ -43,12 +53,13 @@
   margin-left: 16px;
 }
 
-.carousel-inner {
-  margin-bottom: 50px;
-}
 
 .card-text {
   font-size: 20px;
+}
+
+.card-description {
+  font-style: italic;
 }
 
 .card-title {
@@ -56,7 +67,17 @@
   font-weight: bold;
 }
 
-
 .card-deck {
   padding-left: 20px;
+}
+
+.card-status {
+  background-color: rgb(233, 230, 230);
+  padding: 8px;
+  border-radius: 20px;
+  width: auto;
+}
+
+.card {
+  display: flex;
 }

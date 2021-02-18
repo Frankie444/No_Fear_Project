@@ -7,23 +7,28 @@ const createTaskHtml = (
   status
 ) => {
   const html = `
-    <div class="card-deck col-2 text-center" style="width: 18rem;" id="${taskId}">
-    <div class="card">
+  <div class="card-deck"
+    <div class="col mb-4">
+    <div class="card text-center h-100" id="${taskId}">
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
     <div class="card-body">
     <h5 class="card-title">${Name}</h5>
-      <p class="card-text">${description}</p>
-      <p class="card-text">${assignedTo}</p>
-      <p class="card-text">${dueDate}</p>
-      <p class="card-text">${status}</p>
-      <a href="#" class="btn btn-success done-button">Done</a>
+      <p class="card-text card-description">${description}</p>
+      <p class="card-text">Assigned to ${assignedTo}</p>
+      <p class="card-text">Due Date: ${dueDate}</p>
+      <p class="card-text card-status">Status:  ${status}</p>
+      <a href="#" class="btn btn-info done-button">Done &#10003;</a>
+      <a href="#" class="btn btn-warning delete-button">Delete &#10008;</a>
       </div> 
       </div>
-    </div>`;
+      </div>
+      </div>
+  </div>`
   return html;
 };
 
-//create class
+
+ //create class
 class TaskManager {
   constructor(currentId = 0) {
     this.tasks = [];
@@ -44,7 +49,6 @@ class TaskManager {
     this.tasks.push(task);
   }
 
-
   getTaskById(taskId) {
     // Create a variable to store the found task
     let foundTask;
@@ -62,14 +66,18 @@ class TaskManager {
     return foundTask;
   }
 
-  /*getTaskById(taskId) {
+  getTaskById(taskId) {
     return this.tasks.find((task) => task.id === Number.parseInt(taskId));
   }
 
   completeTask(taskId) {
     let task = this.tasks.find((task) => task.id === Number.parseInt(taskId));
+    if (task === undefined) {
+      return;
+    }
+
     task.status = "Done";
-  }*/
+  }
 
   render() {
     let tasksHtmlList = [];
@@ -77,7 +85,7 @@ class TaskManager {
       let task = this.tasks[i];
       let date = new Date(task.dueDate);
       const readDate =
-        date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+        date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
       const taskHtml = createTaskHtml(
         task.id,
         task.taskName,
@@ -94,6 +102,7 @@ class TaskManager {
       tasksList.innerHTML = tasksHtml;
     }
   }
+
   save() {
     let tasksJson = JSON.stringify(this.task);
     localStorage.setItem("tasks", tasksJson);
@@ -102,3 +111,29 @@ class TaskManager {
     localStorage.setItem("currentId", currentId);
 }
 }
+
+    load() {
+     if (localStorage.getItem("tasks")) {
+      const tasksJson = localStorage.getItem("tasks");
+      this.tasks = JSON.parse(tasksJson);
+     }
+
+     if (localStorage.getItem('currentId')) {
+       const currentId = localStorage.getItem("currentId");
+       this.currentId = Number(currentId);
+     }
+    }
+    
+ deleteTask(taskId) {
+    const newTasks = [];
+    for (let i = 0; i < this.tasks.length; i++) {
+        const task = this.tasks[i];
+        if (task.id !== taskId) {
+        newTasks.push(task);
+      }
+    }
+    this.tasks = newTasks;
+  };
+
+};
+
