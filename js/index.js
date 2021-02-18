@@ -3,7 +3,7 @@ const taskManager = new TaskManager(0);
 console.log(taskManager);
 
 const form = document.getElementById("task-form");
-
+taskManager.save();
 taskManager.render();
 
 form.addEventListener("submit", (event) => {
@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
     
   taskManager.render();
-
+  taskManager.save();
   document.getElementsByClassName("needs-validation").style.display = '';
   
   newTaskNameInput.value = "";
@@ -43,13 +43,14 @@ taskList.addEventListener("click", (event) => {
     const taskId = taskElement.id;
     taskManager.completeTask(taskId);
     taskManager.render();
+    taskManager.save();
   }
 
   if (event.target.classList.contains("delete-button")) {
     const parentTask = event.target.parentElement.parentElement;
     const taskId = Number(parentTask.dataset.taskId);
     taskManager.deleteTask(taskId);
-    //taskManager.save();
-    taskManager.render();
-  }
-});
+        taskManager.render();
+        taskManager.save();
+  }     
+  });
