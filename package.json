@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "ws",
     "test": "mocha"
   },
   "repository": {
@@ -18,6 +20,7 @@
   "homepage": "https://github.com/Frankie444/No_Fear_Project#readme",
   "dependencies": {
     "chai": "^4.3.0",
+    "local-web-server": "^4.2.1",
     "mocha": "^8.3.0"
   }
 }

@@ -1,5 +1,6 @@
-const should = require("chai").should();
-const TaskManager = require("../js/taskManager");
+import chai from "chai";
+import { TaskManager } from "../js/taskManager.js";
+chai.should();
 
 describe("TaskManager", function () {
   it("can be created, should contain no tasks", function () {
