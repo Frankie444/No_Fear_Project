@@ -22,12 +22,11 @@ const createTaskHtml = (
       </div> 
       </div>
       </div>
-      </div>
   </div>`;
   return html;
 };
 
-module.exports = class TaskManager {
+export class TaskManager {
   constructor(currentId = 0) {
     this.tasks = [];
     this.currentId = currentId;
@@ -131,4 +130,4 @@ module.exports = class TaskManager {
     }
     this.tasks = newTasks;
   }
-};
+}
