@@ -1,4 +1,5 @@
-//below creates an object instance using the TaskManager class
+import { TaskManager } from "./taskManager.js";
+
 const taskManager = new TaskManager(0);
 console.log(taskManager);
 
@@ -21,7 +22,7 @@ form.addEventListener("submit", (event) => {
   let status = newTaskStatus.value;
 
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
-    
+
   taskManager.render();
   taskManager.save();
   document.getElementsByClassName("needs-validation").style.display = '';
@@ -31,9 +32,9 @@ form.addEventListener("submit", (event) => {
   newTaskAssignedTo.value = "";
   newTaskDueDate.value = "";
   newTaskStatus.value = "";
-  
+
   // code below attempt to clear feilds after submit, but it's failing
-  document.getElementById("task-form").reset();
+  form.reset();
 });
 
 const taskList = document.getElementById("task-list");

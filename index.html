@@ -27,8 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
-    <script src="./js/taskManager.js" defer></script>
-    <script src="./js/index.js" defer></script>
+    <script src="./js/index.js" type="module"></script>
   </head>
 
   <!--header-->
@@ -82,7 +81,7 @@
 
     <!-- Task Name-->
     <form id="task-form" class="needs-validation" novalidate>
-      <br>
+      <br />
       <div class="form-group col-md-6 mb-3 taskName">
         <label for="task-name">Task Name:</label>
         <input type="text" class="form-control" id="task-name" required />
@@ -91,9 +90,7 @@
 
       <!-- Task Description-->
       <div class="form-group col-md-6 mb-3 taskDescription">
-        <label for="task-description"
-          >Task Description:</label
-        >
+        <label for="task-description">Task Description:</label>
         <input
           type="text"
           class="form-control"
@@ -122,9 +119,7 @@
       <!--Due Date -->
       <div id="date" class="form-group date">
         <div class="col-md-6 mb-3 date">
-          <label for="due-date" class="control-label"
-            >Due Date:</label
-          >
+          <label for="due-date" class="control-label">Due Date:</label>
           <div>
             <input
               type="date"
@@ -164,10 +159,8 @@
           Submit form
         </button>
       </div>
-      <br>
+      <br />
     </form>
-
-
 
     <!-- Card section -->
     <div class="container-fluid">
