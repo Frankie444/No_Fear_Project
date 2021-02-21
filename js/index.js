@@ -22,7 +22,7 @@ form.addEventListener("submit", (event) => {
   let status = newTaskStatus.value;
 
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
-
+//* called save function*//
   taskManager.render();
   taskManager.save();
   document.getElementsByClassName("needs-validation").style.display = '';
