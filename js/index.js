@@ -20,27 +20,24 @@ form.addEventListener("submit", (event) => {
   let assignedTo = newTaskAssignedTo.value;
   let dueDate = newTaskDueDate.value;
   let status = newTaskStatus.value;
-
+  
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
 //* called save function*//
-  // taskManager.render();
-  // taskManager.save();
-  // document.getElementsByClassName("needs-validation").style.display = '';
-
-  form.reset();
-  form.classList.remove('was-validated');
-  
-  // newTaskNameInput.value = "";
-  // newTaskDescription.value = "";
-  // newTaskAssignedTo.value = "";
-  // newTaskDueDate.value = "";
-  // newTaskStatus.value = "";
-
-
+      form.reset();
+      form.classList.remove('was-validated');
+    /*document.getElementsByClassName("needs-validation").style.display = '';*/
+  /*
+  newTaskNameInput.value = "";
+  newTaskDescription.value = "";
+  newTaskAssignedTo.value = "";
+  newTaskDueDate.value = "";
+  newTaskStatus.value = ""; */
+    
   taskManager.save();
   taskManager.render();
 
-}); 
+});
+
 
 const taskList = document.getElementById("task-list");
 taskList.addEventListener("click", (event) => {
@@ -54,6 +51,7 @@ taskList.addEventListener("click", (event) => {
     taskManager.render();
   }
 
+  
   if (event.target.classList.contains("delete-button")) {
     const parentTask = event.target.parentElement.parentElement;
     //const taskId = Number(parentTask.dataset.taskId);
