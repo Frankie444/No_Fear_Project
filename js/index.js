@@ -4,7 +4,7 @@ const taskManager = new TaskManager(0);
 console.log(taskManager);
 
 const form = document.getElementById("task-form");
-taskManager.save();
+taskManager.load();
 taskManager.render();
 
 form.addEventListener("submit", (event) => {
@@ -23,35 +23,44 @@ form.addEventListener("submit", (event) => {
 
   taskManager.addTask(taskName, description, assignedTo, dueDate, status);
 //* called save function*//
-  taskManager.render();
-  taskManager.save();
-  document.getElementsByClassName("needs-validation").style.display = '';
-  
-  newTaskNameInput.value = "";
-  newTaskDescription.value = "";
-  newTaskAssignedTo.value = "";
-  newTaskDueDate.value = "";
-  newTaskStatus.value = "";
+  // taskManager.render();
+  // taskManager.save();
+  // document.getElementsByClassName("needs-validation").style.display = '';
 
-  // code below attempt to clear feilds after submit, but it's failing
   form.reset();
-});
+  form.classList.remove('was-validated');
+  
+  // newTaskNameInput.value = "";
+  // newTaskDescription.value = "";
+  // newTaskAssignedTo.value = "";
+  // newTaskDueDate.value = "";
+  // newTaskStatus.value = "";
+
+
+  taskManager.save();
+  taskManager.render();
+
+}); 
 
 const taskList = document.getElementById("task-list");
 taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("done-button")) {
     const taskElement = event.target.parentElement.parentElement;
     const taskId = taskElement.id;
+    //alert(taskId);
+    alert("Click OK to mark as done")
     taskManager.completeTask(taskId);
-    taskManager.render();
     taskManager.save();
+    taskManager.render();
   }
 
   if (event.target.classList.contains("delete-button")) {
     const parentTask = event.target.parentElement.parentElement;
-    const taskId = Number(parentTask.dataset.taskId);
+    //const taskId = Number(parentTask.dataset.taskId);
+    alert("Click OK to delete task");
+    const taskId = Number(parentTask.id);
     taskManager.deleteTask(taskId);
-        taskManager.render();
-        taskManager.save();
+    taskManager.save();
+    taskManager.render();
   }     
   });

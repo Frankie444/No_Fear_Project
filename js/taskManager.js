@@ -101,7 +101,7 @@ export class TaskManager {
   }
 
   save() {
-    let tasksJson = JSON.stringify(this.task);
+    let tasksJson = JSON.stringify(this.tasks);
     localStorage.setItem("tasks", tasksJson);
 
     const currentId = String(this.currentId);
