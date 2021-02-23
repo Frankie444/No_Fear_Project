@@ -92,12 +92,11 @@ export class TaskManager {
         task.status
       );
       tasksHtmlList.push(taskHtml);
-
-      const tasksHtml = tasksHtmlList.join("\n");
-
-      const tasksList = document.querySelector("#task-list");
-      tasksList.innerHTML = tasksHtml;
     }
+
+    const tasksHtml = tasksHtmlList.join("\n");
+    const tasksList = document.querySelector("#task-list");
+    tasksList.innerHTML = tasksHtml;
   }
 
   save() {
