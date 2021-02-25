@@ -33,18 +33,14 @@
   <!--header-->
 
   <div>
-    <h4 class="text-center text-secondary d-flex justify-content-center">
+    <h5 class="text-center text-secondary d-flex justify-content-center">
       Generation JWD Bootcamp
-    </h4>
-    <h2
-      class="text-center text-secondary font-italic d-flex justify-content-center"
-    >
-      No Fear Project
-    </h2>
+    </h5>
   </div>
+  
   <br />
 
-  <body>
+  <body style="font-family: Verdana, sans-serif;">
     <div class="progress">
       <div
         class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
@@ -57,19 +53,20 @@
     </div>
 
     <div class="container-fluid">
-      <!-- Task planner heading goes here - not sure how to use container??-->
+      <!-- Task planner heading goes here -->
       <h2
         id="container-item-h2"
         class="text-light bg-info d-flex justify-content-center"
       >
-        A Task Planner for Robin's Amazing Students
+      A Task Planner for Robin's Amazing Students
       </h2>
       <h4
         id="container-item-h4"
-        class="text-secondary font-italic d-flex justify-content-center"
+        class="text-secondary d-flex justify-content-center"
       >
-        Stay organised during your Generation course!
+       Stay organised during your Generation course
       </h4>
+      <br>
       <img
         src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg"
         alt="To do post-it note"
@@ -84,19 +81,21 @@
       <br />
       <div class="form-group col-md-6 mb-3 taskName">
         <label for="task-name">Task Name:</label>
-        <input type="text" class="form-control" id="task-name" required />
+        <input type="text" class="form-control" id="task-name" placeholder="give your task a name..."required />
         <div class="invalid-feedback">Please provide a valid task name.</div>
       </div>
 
       <!-- Task Description-->
       <div class="form-group col-md-6 mb-3 taskDescription">
         <label for="task-description">Task Description:</label>
-        <input
+        <textarea class="form-control" id="task-description" rows="3" placeholder="and describe it here..."  required></textarea>
+        <!-- <input
           type="text"
           class="form-control"
           id="task-description"
+          placeholder="then describe it here..."
           required
-        />
+        /> -->
         <div class="invalid-feedback">
           Please provide a valid task description.
         </div>
@@ -125,7 +124,7 @@
               type="date"
               data-date=""
               data-date-format="DD MMMM YYYY"
-              value="2021-02-10"
+              value="2021-03-03"
               id="due-date"
               required
             />
@@ -153,7 +152,7 @@
       <div class="form-group">
         <button
           id="submit-button"
-          class="btn btn-info text-dark font-weight-bold"
+          class="btn btn-info text-dark font-weight-normal"
           type="submit"
         >
           Submit form
