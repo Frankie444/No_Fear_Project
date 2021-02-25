@@ -2,7 +2,7 @@
 
 Let this Task Planner store all of your tasks in the one handy place. To use, simply:
 
-- Complete all of the form fields
+- Complete all of the form fields:
   1. Name your task
   2. Describe it in detail
   3. Assign it to a person using the drop down list
