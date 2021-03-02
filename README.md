@@ -1,4 +1,4 @@
-# Welcome to our Task Planner App!
+# Welcome to our Task Planner!
 
 Let this Task Planner store all of your tasks in the one handy place. To use, simply:
 
