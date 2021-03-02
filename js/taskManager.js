@@ -7,8 +7,6 @@ const createTaskHtml = (
   status
 ) => {
   const html = `
-  <div class="card-deck"
-    <div class="col mb-4">
     <div class="card text-center h-100" id="${taskId}">
     <img src="https://knilt.arcc.albany.edu/images/9/99/To-do.jpg" class="card-img-top col-9 row-img-center" alt="...">
     <div class="card-body">
@@ -20,9 +18,7 @@ const createTaskHtml = (
       <a href="#" class="btn btn-info done-button">Done &#10003;</a>
       <a href="#" class="btn btn-warning delete-button">Delete &#10008;</a>
       </div> 
-      </div>
-      </div>
-  </div>`;
+    </div>`;
   return html;
 };
 
